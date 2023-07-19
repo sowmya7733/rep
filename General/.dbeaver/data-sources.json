@@ -1,0 +1,33 @@
+{
+	"folders": {},
+	"connections": {
+		"postgres-jdbc-1896ddf2ac6-4a83cbfa252b1b17": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "xshop",
+			"save-password": true,
+			"configuration": {
+				"host": "e-commerce.cj3oddyv0bsk.us-west-1.rds.amazonaws.com",
+				"port": "5432",
+				"database": "xshop",
+				"url": "jdbc:postgresql://e-commerce.cj3oddyv0bsk.us-west-1.rds.amazonaws.com:5432/xshop",
+				"configurationType": "MANUAL",
+				"home": "postgresql_client",
+				"type": "dev",
+				"provider-properties": {},
+				"auth-model": "native"
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
