@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="vendor">
+	<entities>
+		<data-source id="postgres-jdbc-1896ddf2ac6-4a83cbfa252b1b17">
+			<entity id="1" name="company_details_stripe" fq-name="public.company_details_stripe">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+			<entity id="2" name="company_profile" fq-name="public.company_profile">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="vendor_company_stripe_company_id_a8199f34_fk_company_profile_id" fq-name="public.company_details_stripe.vendor_company_stripe_company_id_a8199f34_fk_company_profile_id" type="fk" pk-ref="2" fk-ref="1"/>
+	</relations>
+</diagram>
