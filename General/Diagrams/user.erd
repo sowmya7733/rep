@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="user">
+	<entities>
+		<data-source id="postgres-jdbc-1896ddf2ac6-4a83cbfa252b1b17">
+			<entity id="1" name="account_activation" fq-name="public.account_activation">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+			<entity id="2" name="address_type" fq-name="public.address_type">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+			<entity id="3" name="reset_password" fq-name="public.reset_password">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+			<entity id="4" name="role" fq-name="public.&quot;role&quot;">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+			<entity id="5" name="save_for_later" fq-name="public.save_for_later">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+			<entity id="6" name="search_history" fq-name="public.search_history">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+			<entity id="7" name="user_address" fq-name="public.user_address">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+			<entity id="8" name="user_cart" fq-name="public.user_cart">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+			<entity id="9" name="user_product_reviews" fq-name="public.user_product_reviews">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+			<entity id="10" name="user_profile" fq-name="public.user_profile">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+			<entity id="11" name="user_role" fq-name="public.user_role">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+			<entity id="12" name="user_wishlist" fq-name="public.user_wishlist">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="fk_address_type" fq-name="public.user_address.fk_address_type" type="fk" pk-ref="2" fk-ref="7"/>
+		<relation name="fk_role_id" fq-name="public.user_role.fk_role_id" type="fk" pk-ref="4" fk-ref="11"/>
+		<relation name="fk_user_id" fq-name="public.account_activation.fk_user_id" type="fk" pk-ref="10" fk-ref="1"/>
+		<relation name="fk_user_id" fq-name="public.reset_password.fk_user_id" type="fk" pk-ref="10" fk-ref="3"/>
+		<relation name="fk_user_id" fq-name="public.save_for_later.fk_user_id" type="fk" pk-ref="10" fk-ref="5"/>
+		<relation name="fk_user_id" fq-name="public.search_history.fk_user_id" type="fk" pk-ref="10" fk-ref="6"/>
+		<relation name="fk_user_id" fq-name="public.user_address.fk_user_id" type="fk" pk-ref="10" fk-ref="7"/>
+		<relation name="fk_user_id" fq-name="public.user_cart.fk_user_id" type="fk" pk-ref="10" fk-ref="8"/>
+		<relation name="fk_user_id" fq-name="public.user_product_reviews.fk_user_id" type="fk" pk-ref="10" fk-ref="9"/>
+		<relation name="fk_user_id" fq-name="public.user_role.fk_user_id" type="fk" pk-ref="10" fk-ref="11"/>
+		<relation name="fk_user_id" fq-name="public.user_wishlist.fk_user_id" type="fk" pk-ref="10" fk-ref="12"/>
+	</relations>
+</diagram>
