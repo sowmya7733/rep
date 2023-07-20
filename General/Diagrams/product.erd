@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="product">
+	<entities>
+		<data-source id="postgres-jdbc-1896ddf2ac6-4a83cbfa252b1b17">
+			<entity id="1" name="avg_rating" fq-name="public.avg_rating">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+			<entity id="2" name="category" fq-name="public.category">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+			<entity id="3" name="collection" fq-name="public.collection">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+			<entity id="4" name="images" fq-name="public.images">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+			<entity id="5" name="product" fq-name="public.product">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+			<entity id="6" name="product_laptop" fq-name="public.product_laptop">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+			<entity id="7" name="product_mobile" fq-name="public.product_mobile">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+			<entity id="8" name="tags" fq-name="public.tags">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+			<entity id="9" name="transaction" fq-name="public.&quot;transaction&quot;">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+			<entity id="10" name="variants" fq-name="public.variants">
+				<path name="public"/>
+				<path name="xshop"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="fk_category_id" fq-name="public.product.fk_category_id" type="fk" pk-ref="2" fk-ref="5"/>
+		<relation name="fk_image_id" fq-name="public.variants.fk_image_id" type="fk" pk-ref="4" fk-ref="10"/>
+		<relation name="fk_product_id" fq-name="public.collection.fk_product_id" type="fk" pk-ref="5" fk-ref="3"/>
+		<relation name="fk_product_id" fq-name="public.images.fk_product_id" type="fk" pk-ref="5" fk-ref="4"/>
+		<relation name="fk_product_id" fq-name="public.product_laptop.fk_product_id" type="fk" pk-ref="5" fk-ref="6"/>
+		<relation name="fk_product_id" fq-name="public.product_mobile.fk_product_id" type="fk" pk-ref="5" fk-ref="7"/>
+		<relation name="fk_product_id" fq-name="public.tags.fk_product_id" type="fk" pk-ref="5" fk-ref="8"/>
+		<relation name="fk_product_id" fq-name="public.variants.fk_product_id" type="fk" pk-ref="5" fk-ref="10"/>
+		<relation name="fk_variant_id" fq-name="public.images.fk_variant_id" type="fk" pk-ref="10" fk-ref="4"/>
+	</relations>
+</diagram>
